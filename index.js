@@ -44,15 +44,23 @@ export const printUserInfo = ({
 //  getSum(1, 2, 3) === 6
 //  getSum(1, 2, 3, 4, 5) === 15
 export const getSum = (...rest) => {
-  for (let i = 0; i < rest.length; i++) {
-    const sum = rest[i] + 1 + i
-    // const sum2 = rest[i] + sum
-    // const sum3 = rest[i] + sum2
-    // const sum4 = rest[i] + sum3
-    // const sum5 = rest[i] + sum4
-    // const sum6 = rest[i] + sum5
-    return sum
-  }
+  // for (let i = 0; i < rest.length; i++) {
+  //   const sum = rest + i
+  //   const sum2 = rest[i] + sum
+  //   const sum3 = rest[i] + sum2
+  //   const sum4 = rest[i] + sum3
+  //   const sum5 = rest[i] + sum4
+  //   const sum6 = rest[i] + sum5
+  //   return sum
+  // }
+  let sum = 0
+  for (let n of rest) sum += n
+  return sum
+
+  // rest.reduce((num, current) => {
+  //   const sum = num + current
+  //   return sum
+  // }, 0)
 }
 
 // INPUT: an unknown number of arguments
